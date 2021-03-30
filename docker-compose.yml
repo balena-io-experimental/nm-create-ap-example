@@ -1,0 +1,11 @@
+version: '2.1'
+services:
+  WifiAP:
+    privileged: true
+    build: .
+    pid: host
+    network_mode: host
+    ipc: host
+    labels:
+      io.balena.features.dbus: '1'
+      io.balena.features.balena-socket: '1'
